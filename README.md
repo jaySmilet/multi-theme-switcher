@@ -28,3 +28,66 @@ The app demonstrates theme switching with persistent settings, API integration, 
 ---
 
 ## 📂 Project Structure
+src/
+components/
+Header.tsx
+context/
+ThemeContext.tsx
+pages/
+Home.tsx
+About.tsx
+Contact.tsx
+themes/
+theme1.ts
+theme2.ts
+theme3.ts
+types/
+theme.ts
+App.tsx
+main.tsx
+
+---
+
+## 🛠️ Technologies Used
+- **React** (Vite + TypeScript)
+- **Bootstrap** (responsive UI)
+- **React Router** (multi-page navigation)
+- **Context API** (theme management)
+- **localStorage** (persistent theme)
+- **FakeStore API** (dummy product data)
+
+---
+
+## 📦 Installation
+1. **Clone the repository**
+```bash
+git clone https://github.com/yourusername/multi-theme-switcher.git
+cd multi-theme-switcher
+
+Install dependencies
+
+bash
+Copy
+Edit
+npm install
+Run the app
+
+bash
+Copy
+Edit
+npm run dev
+Open in browser
+
+arduino
+Copy
+Edit
+http://localhost:5173
+
+📷 Screenshots
+Theme 1 – Light Minimalist
+
+Theme 2 – Dark Mode
+
+Theme 3 – Colorful
+
+
