@@ -1,6 +1,9 @@
 # Multi-Theme Switcher App
 
 Live URL - https://jaysmilet.github.io/multi-theme-switcher/
+
+
+
 A React + TypeScript application with **3 dynamic themes**, built using **Bootstrap** for responsive layouts and styling.  
 The app demonstrates theme switching with persistent settings, API integration, and multiple pages.
 
@@ -66,7 +69,7 @@ main.tsx
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/yourusername/multi-theme-switcher.git
+git clone https://github.com/jaySmilet/multi-theme-switcher.git
 cd multi-theme-switcher
 
 Install dependencies
