@@ -1,0 +1,54 @@
+/* Custom Responsive Table Styles */
+.grid-table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1em;
+}
+
+.grid-table {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  background: #fff;
+  color: #222;
+}
+
+.header {
+  background-color: #0d6efd;
+  color: white;
+  font-weight: bold;
+  padding: 12px 8px;
+  border: 1px solid #edf1f5;
+}
+
+.cell {
+  padding: 10px 8px;
+  border: 1px solid #edf1f5;
+}
+
+.grid-table > .cell:nth-child(4n + 1),
+.grid-table > .header:nth-child(4n + 1) {
+  font-weight: 600;
+}
+
+.grid-table > .cell:nth-child(8n + 1),
+.grid-table > .cell:nth-child(12n + 1) {
+  /* Optional: alternate background */
+  background-color: #f4f8fb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .grid-table {
+    grid-template-columns: 1fr;
+  }
+  .header {
+    padding: 14px 12px;
+  }
+  .cell {
+    padding: 12px 10px;
+  }
+}
