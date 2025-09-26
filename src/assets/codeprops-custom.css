@@ -8,7 +8,8 @@
 
 .grid-table {
   display: grid;
-  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  grid-template-columns: 200px 1.5fr 1fr 1fr; /* Fixed first column, flexible others */
+  min-width: 700px; /* Minimum width to prevent stacking */
   border-collapse: collapse;
   font-family: Arial, sans-serif;
   font-size: 1em;
@@ -23,7 +24,6 @@
   padding: 12px 8px;
   border: 1px solid #edf1f5;
 }
-
 .cell {
   padding: 10px 8px;
   border: 1px solid #edf1f5;
@@ -36,19 +36,8 @@
 
 .grid-table > .cell:nth-child(8n + 1),
 .grid-table > .cell:nth-child(12n + 1) {
-  /* Optional: alternate background */
   background-color: #f4f8fb;
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .grid-table {
-    grid-template-columns: 1fr;
-  }
-  .header {
-    padding: 14px 12px;
-  }
-  .cell {
-    padding: 12px 10px;
-  }
-}
+/* No stacking; always keep grid layout */
+/* Just let user horizontally scroll on small devices */
