@@ -1,23 +1,23 @@
-/* Wrapper for horizontal scrolling on small devices */
-.cp-responsive-table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
 /* Table container */
 .cp-table {
-  min-width: 600px; /* ensures horizontal scroll if screen smaller */
-  border: 1px solid #ddd;
-  font-family: Arial, sans-serif;
+  display: table;
   width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  text-align: left;
 }
 
-/* Row as grid */
+/* Rows */
 .cp-row {
-  display: grid;
-  grid-template-columns: 150px 1fr 1fr;
-  border-bottom: 1px solid #ddd;
+  display: table-row;
+}
+
+/* Cells */
+.cp-cell {
+  display: table-cell;
+  padding: 10px;
+  border: 1px solid #ddd;
+  vertical-align: top;
 }
 
 /* Header row */
@@ -27,49 +27,19 @@
   font-weight: bold;
 }
 
-/* Cells */
-.cp-cell {
-  padding: 10px;
-  border: 1px solid #ddd;
-  word-wrap: break-word;
-}
-
-/* Zebra stripes */
+/* Zebra striping */
 .cp-row.cp-alt {
   background-color: #f9f9f9;
 }
 
-/* Scrollable and stacked for small screens */
-@media (max-width: 600px) {
+/* Responsive: enable horizontal scroll only on small screens */
+@media (max-width: 768px) {
+  .cp-responsive-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
   .cp-table {
-    min-width: 100%;
-  }
-
-  .cp-row {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 10px;
-    padding: 8px;
-  }
-
-  .cp-head {
-    display: none;
-  }
-
-  .cp-cell {
-    display: flex;
-    justify-content: space-between;
-    padding: 6px 8px;
-    border-bottom: 1px solid #eee;
-  }
-
-  .cp-cell:last-child {
-    border-bottom: 0;
-  }
-
-  .cp-cell::before {
-    content: attr(data-label);
-    font-weight: bold;
-    margin-right: 8px;
+    min-width: 600px; /* forces scroll when viewport is smaller */
   }
 }
