@@ -1,43 +1,43 @@
 /* Custom Responsive Table Styles */
-.grid-table-container {
+.responsive-table-container {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   margin-bottom: 1em;
 }
 
-.grid-table {
-  display: grid;
-  grid-template-columns: 200px 1.5fr 1fr 1fr; /* Fixed first column, flexible others */
-  min-width: 700px; /* Minimum width to prevent stacking */
+.comparison-table {
+  width: 100%;
+  min-width: 600px;
   border-collapse: collapse;
   font-family: Arial, sans-serif;
-  font-size: 1em;
   background: #fff;
   color: #222;
+  font-size: 1em;
 }
 
-.header {
-  background-color: #0d6efd;
-  color: white;
-  font-weight: bold;
+.comparison-table th,
+.comparison-table td {
   padding: 12px 8px;
   border: 1px solid #edf1f5;
-}
-.cell {
-  padding: 10px 8px;
-  border: 1px solid #edf1f5;
+  text-align: left;
 }
 
-.grid-table > .cell:nth-child(4n + 1),
-.grid-table > .header:nth-child(4n + 1) {
-  font-weight: 600;
+.comparison-table thead tr {
+  background: #0d6efd;
+  color: #fff;
+}
+.comparison-table tbody tr:nth-child(even) {
+  background: #f4f8fb;
 }
 
-.grid-table > .cell:nth-child(8n + 1),
-.grid-table > .cell:nth-child(12n + 1) {
-  background-color: #f4f8fb;
+@media (max-width: 600px) {
+  .comparison-table {
+    font-size: 0.95em;
+    min-width: 400px;
+  }
+  .comparison-table th,
+  .comparison-table td {
+    padding: 10px 6px;
+  }
 }
-
-/* No stacking; always keep grid layout */
-/* Just let user horizontally scroll on small devices */
